@@ -2,15 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 
+.main {
+    height: 100vh;
+    width: 100vw;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
+
+}
 body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #cac3c3a4;
+    background-image: linear-gradient(to top , #bfe9ff, #f3b4bb);
+
 }
+
+h1 {
+    color: rgb(239, 241, 245);
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 .calculator {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
@@ -19,9 +40,10 @@ body {
 }
 
 .container {
-    scale: 200%;
+    scale: 100%;
     position: relative;
-    max-width: 250px;
+    max-width: 550px;
+    height: 600px;
     width: 100%;
     border-radius: 12px;
     padding: 10px 20px 20px;
@@ -30,7 +52,7 @@ body {
 }
 .display {
 
-    height: 80px;
+    height: 180px;
     width: 100%;
     outline: none;
     border: none;
@@ -39,14 +61,19 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
-    border: 1px solid rgba(0, 0, 0, 0.363);
+    border: 1px solid rgba(0, 0, 0, 0.267);
     border-radius: 10px;
     justify-content: space-around;
-    display: flex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    overflow: hidden;
     align-items: flex-end;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    pointer-events: none;
+    user-select:none;
    /*
     background: #cac3c3a4;
     */
@@ -54,18 +81,24 @@ body {
 
 
 .calculator button {
-   height: 40px;
+   height:  65px;
    width: 100%;
- 
+   border: none;
+   cursor: pointer;
    border-radius: 10px;
    font-size: 1.5rem;
    font-weight: bold;
    outline: none;
-   background: #cac3c3a4;
+   background: #cac3c33f;
     text-align: center;
 }
 
 .equal-key {
     grid-column-start: 3;
     grid-column-end: 5;
+}
+
+.operator-key, .clear-key, .percent-key, .backspace-key, .equal-key, .operator {
+
+    color: rgb(245, 144, 144);
 }
